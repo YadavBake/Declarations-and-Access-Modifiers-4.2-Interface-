@@ -1,6 +1,6 @@
 
-															Declarations and Access Modifiers Part-11|| interfaces-1
-														===============================================================
+												Declarations and Access Modifiers Part-11|| interfaces-1
+											    ===============================================================
 --------------
   Interfaces 
 --------------
@@ -23,7 +23,7 @@
 ====================================================================================================================================================================================
 
 ---------------------
-	1. Intrduction
+  1. Intrduction
 ---------------------	
 
 	Defination-1 
@@ -37,19 +37,19 @@
 		- DataBase vendor is responsible to implement JDBC API.
 		
 						
-												   Sun
-													|
-													|
+											       Sun
+												|
+												|
 											-----------------
-											|  JDBC API     |
-											-----------------
-											|		 |      |
-							------------------		 |		|------------------		
-							|						 |						  | 	
-							|						 |						  |
-					---------------------   ---------------------	---------------------	
-					|  Oracle Driver    |   |  Oracle Driver    |   |  Oracle Driver    | //=> These DataBase Vendor 
-					---------------------   ---------------------   ---------------------
+									    ---------->	|  JDBC API     |<-------------------
+									   |  		-----------------		    | 	
+									   |		|			      	    |
+							------------------ |		|------------------		    |
+							|						 |		    | 	
+							|						 |		    |
+							|	---------------------   ---------------------	---------------------	
+							|------	|  Oracle Driver    |   |  Oracle Driver    |   |  Oracle Driver    | //=> These DataBase Vendor 
+								---------------------   ---------------------   ---------------------
 					
 		Ex. 
 
@@ -58,17 +58,17 @@
 		- Web server vendor is responsible to implement servlet API.
 		
 					
-										   Sun					
-			   								|					
-	           								|                    
-	           						-----------------                    
-		       						|  Servlet API  |                    
-	           						-----------------                    
-	           						|		 |      |                    
-	           		------------------		 |		|------------------		                    
-	           		|						 |						  | 	                    
-	           		|						 |						  |                    
-	         -----------------------   ------------------------	  -----------------------                    
+							   Sun					
+			   				    |					
+	           					    |                    
+	           				    -----------------                    
+		       				    |  Servlet API  |                    
+	           				    -----------------                    
+	           				   |   |      |                    
+	           		------------------|    |      |------------------		                    
+	           		|		       |	    	        | 	                    
+	           		|		       |			|                    
+	         -----------------------   ------------------------   -----------------------                    
 	         |Appache Tomcat server|   |Oracle Weblogic Server|   |IBM Websphere server |                    
 	         -----------------------   ------------------------   -----------------------                    
 	                            
@@ -80,19 +80,19 @@
 		- From service provider point of view an interface defines the set of services what his offering hance any contract between client and service provider is considard as 
 		  an interface.
 		  
-			Ex. -------										-------	
-		        |	  |		  -------------------           |	  |	
-		        |	  |		  |					|           |	  |	
-		        -------       | getAttented()   |           ------- 
-		           |		  | getMarkes()     |              |	
-		           |		  | updateMarks()   |              |	
+			Ex. -------				    -------	
+		        |	  |    -------------------          |	  |	
+		        |	  |   |			|           |	  |	
+		        ----------    | getAttented()   |           ------- 
+		           |	      | getMarkes()     |              |	
+		           | 	      | updateMarks()   |              |	
 		           ^          | .               |<------------ ^    
 		           |--------->| .               |              |
-		           |		  | service         |              |	
-		           ^		  |                 |              ^	
-		           |		  |	                |              |	
-		        client 		  -------------------	 		service provider
-		        					Sevice 					
+		           |	      | service         |              |	
+		           ^	      |                 |              ^	
+		           |  	      |	                |              |	
+		        client 	      -------------------	 		service provider
+		        		   Sevice 					
 		  
 		 Ex.
 		 
@@ -100,18 +100,18 @@
 			  what customer is accepting hance a these GUI screen access contract between customer and bank people.
 			  
 		
-				-------										-------						
-				|	  |		  -------------------           |	  |				  
-				|	  |		  |					|           |	  |				  
-				-------       | withdrawal	    |           ------- 			  
-				   |		  | mini statment   |              |				  
-				   |		  | update balance  |              |				  
-                   ^          | .               |<------------ ^    
-                   |--------->| .               |              |
-                   |		  | service         |              |	
-                   ^		  |                 |              ^	
-                   |		  |	                |              |	
-                customer 	  -------------------	 		Bank people 
+				-------					    -------						
+				|      |       -------------------          |	  |				  
+				|      |      |			|           |	  |				  
+				-------       | withdrawal	|           ------- 			  
+				   |	      | mini statment   |              |				  
+				   |	      | update balance  |              |				  
+                   		   ^          | .               |<------------ ^    
+                  		   |--------->| .               |              |
+                   		   |	      | service         |              |	
+                   		   ^	      |                 |              ^	
+                  		   |   	      |	                |              |	
+                		customer      -------------------	   Bank people 
                 			  Bank ATM GUI screen  					
 							  
 							  
@@ -147,16 +147,16 @@
 	                                
 	
 	abstract class ServiceProvider implements interf {
-    --------		
+       --------		
 		public void m1() {
-	   -------		
+	       -------		
 		}
 	}
 
 	class SubServiceProvider extends  interf {
 								  
 		public void m2() {						  
-	  ---------		
+	      ---------		
 		}	
 	}						  
 	
@@ -208,7 +208,7 @@
  Q. considard the following expression bellow.
 		
 	-------------------	
-	|	X extends Y   |
+	|X extends Y   |
 	-------------------
 		
 	 - For which of the following X and Y  the above expression is valid ? 	
@@ -223,8 +223,8 @@
 	
  Q. 
 
-  -------------------							 -----------------------  -------------------------------   ------------------------------
-  |	X extends Y,Z   |                            | X implements  Y,Z   |  |	X extends Y implements Z    |   | X implements Y extends Z   |
+  -------------------				 -----------------------  -------------------------------   ------------------------------
+  |X extends Y,Z   |                        	  | X implements  Y,Z   |  |	X extends Y implements Z|   | X implements Y extends Z   |
   -------------------	                         -----------------------  -------------------------------   -----------------------------	
 	                                                                                                       
 	1. X,Y,Z should be interfaces.//valid       1. x--> class             	1. X,Y ---> classes            CE: because we have to take extends first followed by interface 
